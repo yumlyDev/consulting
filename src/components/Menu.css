@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+Grund:wght@300&display=swap');
+.menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-right: 200px;
+}
+.menu ul {
+  list-style: none; /* quita puntos */
+  padding: 10px;
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+}
+
+
+
+.menu a {
+  text-decoration: none; /* quita subrayado */
+  color: black;          /* color por defecto */
+  transition: color 0.3s;
+}
+
+
+/* Hover opcional para efecto */
+.menu a:hover {
+  color: #ff6600; /* cambia color al pasar el cursor */
+}
