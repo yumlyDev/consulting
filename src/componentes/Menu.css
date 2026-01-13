@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+.menu {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  z-index: 999;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 15px 50px;
+  margin-left: 0%;
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.menu a:hover {
+  background-color: #c0c9db;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu > ul > li {
+  position: relative;
+}
+
+/* SUBMENÚ (oculto por defecto) */
+.submenu {
+  position: absolute;
+  background: #9ba2b0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.2s ease;
+  top: 30px;
+}
+
+/* SOLO aparece al hacer HOVER en EXPERIENCIA */
+.submenu-hover:hover .submenu {
+  display: block;
+  opacity: 1;
+}
+
+/* Estilo de enlaces del submenú */
+.submenu li a {
+  padding: 5px 5px;
+  display: block;
+  border-radius: 10px;
+}
+
+.submenu li a:hover {
+  background: #c0c9dbea;
+}
