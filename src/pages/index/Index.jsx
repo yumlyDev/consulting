@@ -23,6 +23,7 @@ function Index() {
 
         <section id="servicios">
           <h2>Servicios</h2>
+            <p>Servicios tecnológicos eficientes, seguros y a medida.</p>
           <Link to="/servicios/desarrollo">
             <img
               className="paneles"
@@ -48,11 +49,32 @@ function Index() {
 
         <section id="soluciones">
           <h2>Soluciones</h2>
-          <p>Descripción de soluciones.</p>
+          <p>Soluciones digitales pensadas para crecer contigo.</p>
+          <Link to="/soluciones/soporte">
+            <img
+              className="paneles"
+              src="/soporte.png"
+              alt="servicio de soporte"
+            />
+          </Link>
+          <Link to="/soluciones/proteccion">
+            <img
+              className="paneles"
+              src="/proteccion.png"
+              alt="servicio de proteccion"
+            />
+          </Link>
+          <Link to="/soluciones/eficiencia">
+            <img
+              className="paneles"
+              src="/eficiencia.png"
+              alt="servicio de eficiencia"
+            />
+          </Link>
         </section>
 
         <section id="contact">
-          <h2>Contacto</h2>
+          <h2>Casos de exito</h2>
           <p>Formulario o información de contacto.</p>
         </section>
       </main>
