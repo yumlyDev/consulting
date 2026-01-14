@@ -1,0 +1,45 @@
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-Fit: cover;
+    z-Index: -1;
+}
+
+main {
+    position: relative;
+    z-Index: 1;
+    color: white;
+    padding-Top: 120px,
+}
+
+#home {
+    padding: 100px 20px;
+    margin: 50px;
+    text-Align: center
+}
+
+#servicios {
+    padding: 100px 20px;
+    text-Align: center;
+    background-Color: #222222a1
+}
+
+#soluciones {
+    padding: 100px 20px;
+    text-Align: center;
+}
+
+#contact {
+    padding: 100px 20px;
+    text-Align: center;
+    background-Color: #222222a1;
+}
+.paneles{
+    border-radius: 20px;
+    margin: 20px;
+    padding: auto;
+    box-shadow:  3px 3px 10px  #000000;
+}
