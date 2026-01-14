@@ -76,6 +76,13 @@ function Index() {
         <section id="contact">
           <h2>Casos de exito</h2>
           <p>Formulario o información de contacto.</p>
+           <Link to="https://www.trainmovementscenter.es/">
+            <img
+              className="paneles"
+              src="/tcm.png"
+              alt="fisioterapia TCM Alcorcon"
+            />
+          </Link>
         </section>
       </main>
     </div>
