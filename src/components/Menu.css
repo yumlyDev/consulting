@@ -1,24 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
-.menu {
-  display: flex;
-  position: relative;
+/* Header y cabecera */
+.cabeceraaback {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 50px;
+  z-index: 10;
+  background-color: rgba(185, 185, 185, 0.5); /* semitransparente */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Logo */
+.logo {
+  height: 5em;
   z-index: 999;
 }
 
-.menu ul {
-  list-style: none;
-  padding: 15px 50px;
-  margin-left: 0%;
+/* Menú principal */
+.menu {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 
 .menu a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #002c6b;
+  font-weight: 700; /* negrita */
   padding: 10px 14px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -26,39 +38,36 @@
 }
 
 .menu a:hover {
-  background-color: #c0c9db;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #002c6b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.menu > ul > li {
-  position: relative;
-}
-
-/* SUBMENÚ (oculto por defecto) */
+/* Submenú */
 .submenu {
   position: absolute;
   background: #9ba2b0;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: all 0.2s ease;
   top: 30px;
+  list-style: none;
+  padding: 0;
 }
 
-/* SOLO aparece al hacer HOVER en EXPERIENCIA */
 .submenu-hover:hover .submenu {
   display: block;
   opacity: 1;
 }
 
-/* Estilo de enlaces del submenú */
 .submenu li a {
-  padding: 5px 5px;
+  padding: 5px 10px;
   display: block;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .submenu li a:hover {
-  background: #c0c9dbea;
+  background: rgba(192, 201, 219, 0.9);
+  color: #002c6b;
 }

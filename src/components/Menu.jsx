@@ -3,38 +3,21 @@ import "./Menu.css";
 
 function Menu() {
   return (
-    <nav className="menu">
-      <ul>
-        <li>
-          <Link to="/">Inicio</Link>
-        </li>
+    <header className="cabeceraaback">
+      <div>
+        <img className="logo" src="/logo.png" alt="Logo" />
+      </div>
 
-        <li className="submenu-hover">
-          <Link to="/resumen">Experiencia</Link>
-
-          <ul className="submenu">
-            <li>
-              <Link to="/sistemas">Sistemas</Link>
-            </li>
-            <li>
-              <Link to="/desarrollador">Desarrollador</Link>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <Link to="/acerca">Sobre mí</Link>
-        </li>
-
-        <li>
-          <Link to="/estudios">Estudios</Link>
-        </li>
-
-        <li>
-          <Link to="/contacto">Contacto</Link>
-        </li>
-      </ul>
-    </nav>
+      <nav className="menu">
+        <Link to="/">Inicio</Link>
+        <a href="#servicios">Servicios</a>
+        <a href="#soluciones">Soluciones</a> 
+         <a href="#nosotros">Sobre nosotros</a>
+        <a href="#contact">Contacto</a>
+        <Link to="/sesion">Iniciar sesión</Link>
+      </nav>
+    </header>
+   
   );
 }
 
