@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from "./components/Menu.jsx";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/footer.jsx";
 import Index from "./pages/Index.jsx";
 import "./styles/App.css";
 
