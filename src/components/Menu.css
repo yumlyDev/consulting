@@ -26,6 +26,8 @@
 .menu {
   display: flex;
   gap: 30px;
+  margin-right: 700px;
+  
 }
 
 .menu a {

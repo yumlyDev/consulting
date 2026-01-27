@@ -4,20 +4,17 @@ import "./Menu.css";
 function Menu() {
   return (
     <header className="cabeceraaback">
-      <div>
-        <img className="logo" src="/logo.png" alt="Logo" />
-      </div>
+      <img className="logo" src="/logo.png" alt="Logo" />
 
       <nav className="menu">
         <Link to="/">Inicio</Link>
-        <a href="#servicios">Servicios</a>
-        <a href="#soluciones">Soluciones</a> 
-         <a href="#nosotros">Sobre nosotros</a>
-        <a href="#contact">Contacto</a>
+        <Link to="/servicios">Servicios</Link>
+        <Link to="/soluciones">Soluciones</Link>
+        <Link to="/nosotros">Sobre nosotros</Link>
+        <Link to="/contact">Contacto</Link>
         <Link to="/sesion">Iniciar sesión</Link>
       </nav>
     </header>
-   
   );
 }
 

@@ -19,14 +19,6 @@ function Index() {
           <p>Tecnología, innovación y eficiencia para tu negocio.</p>
         </section>
 
-        <section id="servicios">
-          <h2>Servicios</h2>
-          <p>Descripción de servicios.</p>
-          <img className="paneles" src=".\public\dev.png" alt="servicio de desarrollo"></img>
-          <img className="paneles" src=".\public\transformacion.png" alt="servicio de transformacion digital "></img>
-         <a href=".\src\pages\servicios\gestion.jsx" > <img className="paneles" src=".\public\gestion.png" alt="servicio de vgestion y mantenimiento"></img></a>
-        </section>
-
         <section id="soluciones">
           <h2>Soluciones</h2>
           <p>Descripción de soluciones.</p>

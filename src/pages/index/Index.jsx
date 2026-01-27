@@ -75,7 +75,8 @@ function Index() {
 
         <section id="contact">
           <h2>Casos de exito</h2>
-          <p>Formulario o información de contacto.</p>
+          <p>Casos de éxito que hablan por sí mismos.
+Proyectos donde optimizamos procesos, incrementamos resultados y generamos crecimiento real</p>
            <Link to="https://www.trainmovementscenter.es/">
             <img
               className="paneles"
