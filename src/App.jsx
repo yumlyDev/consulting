@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu.jsx";
 import Footer from "./components/Footer.jsx";
 import Index from "./pages/index/Index.jsx";
@@ -20,9 +20,9 @@ function App() {
         <Route path="/index" element={<Index />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/soluciones" element={<Soluciones />} />
-            <Route path="/about" element={<About />} />
-             <Route path="/contacto" element={<Contacto />} />
-              <Route path="/sesion" element={<Sesion />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/sesion" element={<Sesion />} />
       </Routes>
 
       <Footer />
