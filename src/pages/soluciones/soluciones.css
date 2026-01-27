@@ -1,0 +1,38 @@
+.servicios {
+  background: #f5f7fb;
+}
+.paneles-container {
+  margin: auto auto;
+  max-width: 1200px;
+}
+.paneles {
+  width: 260px;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover profesional */
+.paneles:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Separación visual entre bloques */
+.servicios section {
+  padding: 40px 0;
+}
+
+/* Títulos */
+.servicios h1 {
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: black;
+}
+
