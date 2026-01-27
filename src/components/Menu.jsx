@@ -10,8 +10,8 @@ function Menu() {
         <Link to="/">Inicio</Link>
         <Link to="/servicios">Servicios</Link>
         <Link to="/soluciones">Soluciones</Link>
-        <Link to="/nosotros">Sobre nosotros</Link>
-        <Link to="/contact">Contacto</Link>
+        <Link to="/about">Sobre nosotros</Link>
+        <Link to="/contacto">Contacto</Link>
         <Link to="/sesion">Iniciar sesión</Link>
       </nav>
     </header>

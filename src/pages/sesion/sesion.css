@@ -1,0 +1,75 @@
+/* src/pages/soluciones/soluciones.css */
+.sesion {
+  background: #f5f7fb;
+  min-height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Contenedor de paneles */
+.paneles-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* se acomodan en varias filas si no caben */
+  gap: 20px;       /* espacio entre paneles */
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Estilo de cada panel */
+.paneles {
+  width: 260px;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover profesional */
+.paneles:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Separación visual entre secciones */
+.soluciones section {
+  padding: 40px 0;
+}
+
+/* Títulos */
+.soluciones h1 {
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Texto descriptivo */
+.soluciones p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .paneles {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .paneles {
+    width: 100%;
+    height: auto;
+  }
+  .paneles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

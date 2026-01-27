@@ -1,8 +1,8 @@
 import Menu from "../../components/Menu.jsx";
 import { Link } from "react-router-dom";
-import "./index.css";
+import "./contacto.css";
 
-function Index() {
+function Contacto() {
   return (
     <div>
       {/* Video de fondo */}
@@ -87,4 +87,4 @@ Proyectos donde optimizamos procesos, incrementamos resultados y generamos creci
   );
 }
 
-export default Index;
+export default Contacto;
