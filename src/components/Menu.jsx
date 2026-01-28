@@ -9,7 +9,7 @@ function Menu() {
       <nav className="menu">
         <Link to="/">Inicio</Link>
         <Link to="/servicios">Servicios</Link>
-        <Link to="/soluciones">Soluciones</Link>
+        <Link to="/servicios#soluciones">Soluciones</Link>
         <Link to="/about">Sobre nosotros</Link>
         <Link to="/contacto">Contacto</Link>
         <Link to="/sesion">Iniciar sesión</Link>
