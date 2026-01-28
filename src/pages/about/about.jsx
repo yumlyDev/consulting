@@ -1,4 +1,4 @@
-import "./About.css";
+import "./about.css";
 function About() {
   return (
     <main className="about" style={{ padding: "100px 20px", textAlign: "center" }}>
