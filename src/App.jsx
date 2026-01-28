@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu.jsx";
 import Footer from "./components/footer.jsx";
 import Index from "./pages/index/Index.jsx";
-import Servicios from "./pages/servicios/Servicios.jsx"; // <-- IMPORTAR PÁGINA
+import Servicios from "./pages/servicios/servicios.jsx"; // <-- IMPORTAR PÁGINA
 import Soluciones from "./pages/soluciones/Soluciones.jsx";
 import About from "./pages/about/About.jsx";
 import Contacto from "./pages/contacto/contacto.jsx";
