@@ -4,18 +4,18 @@ import { useLocation } from "react-router-dom";
 function Servicios() {
   const location = useLocation();
 
-
-useEffect(() => {
-  if (location.hash) {
-    const element = document.querySelector(location.hash);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Si no hay hash, ir al inicio de la página
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  } else {
-    // Si no hay hash, ir al inicio de la página
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-}, [location]);
+  }, [location]);
+
   return (
     <main
       className="servicios"
