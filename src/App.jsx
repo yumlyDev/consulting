@@ -4,7 +4,7 @@ import Menu from "./components/Menu.jsx";
 import Footer from "./components/footer.jsx";
 import Index from "./pages/index/Index.jsx";
 import Servicios from "./pages/servicios/servicios.jsx"; // <-- IMPORTAR PÁGINA
-import Soluciones from "./pages/soluciones/Soluciones.jsx";
+import Soluciones from "./pages/soluciones/soluciones.jsx";
 import About from "./pages/about/About.jsx";
 import Contacto from "./pages/contacto/contacto.jsx";
 import Sesion from "./pages/sesion/sesion.jsx";
