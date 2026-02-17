@@ -1,0 +1,74 @@
+/* Contenedor principal de la página */
+.aviso-legal-page {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  min-height: calc(100vh - 80px); /* Ajusta si tu menú tiene otra altura */
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+.aviso-legal-page h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* Contenedor del texto legal */
+.aviso-legal-content {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Párrafos y títulos internos */
+.aviso-legal-content p {
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.aviso-legal-content p strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Scroll personalizado */
+.aviso-legal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.aviso-legal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.aviso-legal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aviso-legal-page {
+    padding: 1rem;
+  }
+
+  .aviso-legal-content {
+    padding: 1rem;
+  }
+
+  .aviso-legal-page h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,29 +1,3 @@
-/* --------------------------
-   Reglas generales (todas)
---------------------------- */
-
-body {
-  font-family: Montserrat, sans-serif;
-  line-height: 1.5;
-  font-weight: 600;
-  background: #e0eaff;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-/* Patron de fondo */
-.patron {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  z-index: -50;
-}
-.patronimagen {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+html, body, #root {
+  font-family: 'Montserrat', sans-serif;
 }

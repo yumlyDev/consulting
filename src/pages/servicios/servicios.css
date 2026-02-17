@@ -1,0 +1,19 @@
+
+.servicios, .soluciones {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: rgba(34, 34, 34, 0.63);
+}
+
+.servicios h1, .soluciones h1 {
+  font-size: 3rem; /* más flexible que 48px fijo */
+  margin: 0 0 20px;
+}
+
+.descripcion {
+
+  text-align: center; /* centra el texto dentro del bloque */
+  width: 50%;         /* ancho del bloque */
+  padding: 10px;
+  margin: 0 auto;     /* centra el bloque horizontalmente */
+}

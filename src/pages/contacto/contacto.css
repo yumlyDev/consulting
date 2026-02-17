@@ -1,0 +1,119 @@
+/* =============================
+   Main centrado vertical y horizontal
+  
+============================= */
+body {
+  background: linear-gradient(180deg, #e6f0ff, #ffffff);
+  color: #000;
+}
+
+#contacto-main {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  gap: 40px;
+  min-height: calc(100vh - 80px); /* ajusta si el menu tiene 80px de altura */
+  padding: 20px;
+  flex-wrap: wrap; /* para móviles */
+}
+
+/* =============================
+   Formulario
+============================= */
+#formulario {
+  margin-top: 120px; /* empuja el formulario hacia abajo */
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 5px 15px rgba(206, 7, 7, 0.05);
+  max-width: 400px;
+  width: 100%;
+    background: linear-gradient(135deg, #ffffff, #e6f0ff);
+}
+
+#formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Agrupamos inputs y textarea */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  transition: all 0.25s ease;
+  width: 100%;
+  resize: vertical; /* textarea redimensionable solo vertical */
+}
+
+#formulario input:focus,
+#formulario textarea:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 6px rgba(74,144,226,0.3);
+  outline: none;
+}
+
+/* Estilos del botón */
+#formulario button[type="submit"] {
+  background-color: #4A90E2;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  transition: background-color 0.25s ease;
+}
+
+#formulario button[type="submit"]:hover {
+  background-color: #357ABD;
+}
+
+/* Labels */
+#formulario label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+}
+
+/* Feedback mensaje */
+.feedback {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #206d1c; /* verde para éxito */
+}
+
+.feedback.error {
+  color: #d32f2f; /* rojo para error */
+}
+
+/* =============================
+   Ajuste responsive
+============================= */
+@media (max-width: 700px) {
+  #contacto-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: auto; /* deja que crezca según contenido */
+  }
+
+  #formulario {
+    max-width: 90%;
+    width: 100%;
+    padding: 15px 20px;
+    
+  }
+
+  #formulario input, #formulario textarea, #formulario button {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}

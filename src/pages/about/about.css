@@ -1,0 +1,102 @@
+.about {
+  color: #000;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.25rem;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #013664; 
+}
+
+.bloque1 {
+  max-width: 100%;
+  margin: 50px auto 30px;
+  padding: 20px;
+  position: relative;
+}
+
+.parrafo1 {
+  color: #013664;
+  margin: 60px auto 0; /* menos margen superior, se ve más integrado */
+  max-width: 600px;
+  text-align: justify;
+  font-weight: 400; /* menos pesado que bold */
+}
+
+.foto1 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  border: 5px solid #fff;
+  display: block;
+  margin: 20px auto;
+}
+
+.bloque2,
+.bloque3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.parrafo2,
+.parrafo3 {
+  max-width: 600px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.foto2,
+.foto3 {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* BLOQUE 2: textura y separación mejorada */
+.bloque2 {
+  width: 75%;
+  padding: 40px 20px;
+  background-color: #e0f0ff;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin: auto; /* margen superior negativo + centrado horizontal */
+  box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bloque2,
+  .bloque3 {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bloque1,
+  .bloque2 {
+    max-width: 90%;
+    padding: 20px 10px;
+  }
+
+  .foto1,
+  .foto2,
+  .foto3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .bloque2 {
+    margin-top: -30px; /* menos superposición en móvil */
+  }
+}

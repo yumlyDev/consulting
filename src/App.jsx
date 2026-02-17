@@ -1,28 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./componentes/Menu.jsx";
-import Inicio from "./pages/inicio/Inicio.jsx";
-import Acerca from "./pages/acerca/Acerca.jsx";
-import Contacto from "./pages/contacto/Contacto.jsx";
-import Estudios from "./pages/estudios/Estudios.jsx";
-import Resumen from "./pages/experiencia/Resumen.jsx";
-import Experiencia from "./pages/experiencia/sistemas/ExperienciaCard.jsx";
-import Sistemas from "./pages/experiencia/sistemas/Sistemas.jsx";
-import Desarrollador from "./pages/experiencia/desarrollo/Desarrollador.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Menu from "./components/Menu.jsx";
+import Footer from "./components/footer.jsx";
+import Index from "./pages/index/Index.jsx";
+import Servicios from "./pages/servicios/servicios.jsx"; // <-- IMPORTAR PÁGINA
+import Soluciones from "./pages/soluciones/soluciones.jsx";
+import About from "./pages/about/about.jsx";
+import Contacto from "./pages/contacto/contacto.jsx";
+import Sesion from "./pages/sesion/sesion.jsx";
 import "./styles/App.css";
+import AvisoLegal from "./pages/aviso/avisolegal.jsx";
+import Terminos from "./pages/terminos/terminos.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Menu />
+
       <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/acerca" element={<Acerca />} />
+        <Route path="/" element={<Index />} />
+        <Route path="/index" element={<Index />} />
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/soluciones" element={<Soluciones />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/estudios" element={<Estudios />} />
-        <Route path="/resumen" element={<Resumen />} />
-        <Route path="/sistemas" element={<Sistemas />} />
-        <Route path="/desarrollador" element={<Desarrollador />} />{" "}
+        <Route path="/sesion" element={<Sesion />} />
+        <Route path="/AvisoLegal" element={<AvisoLegal />} />
+        <Route path="/Terminos" element={<Terminos />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
