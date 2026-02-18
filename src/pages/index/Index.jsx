@@ -39,14 +39,14 @@ function Index() {
           <Link to="/sesion">
             <img
               className="paneles"
-              src="/public/servicios/transformacion.png"
+              src="/servicios/transformacion.png"
               alt="servicio de transformación digital"
             />
           </Link>
           <Link to="/sesion">
             <img
               className="paneles"
-              src="/public/servicios/gestion.png"
+              src="/servicios/gestion.png"
               alt="servicio de gestión y mantenimiento"
             />
           </Link>
@@ -58,28 +58,28 @@ function Index() {
           <Link to="/sesion">
             <img
               className="paneles"
-              src="public/soluciones/soporte.png"
+              src="soluciones/soporte.png"
               alt="servicio de soporte"
             />
           </Link>
           <Link to="/sesion">
             <img
               className="paneles"
-              src="public/soluciones/proteccion.png"
+              src="/soluciones/proteccion.png"
               alt="servicio de proteccion"
             />
           </Link>
           <Link to="/sesion">
             <img
               className="paneles"
-              src="public/soluciones/eficiencia.png"
+              src="git /soluciones/eficiencia.png"
               alt="servicio de eficiencia"
             />
           </Link>
         </section>
 
         <section id="contact">
-          <h2>Casos de exito </h2>
+          <h2>Casos de exito</h2>
           <p>
             Casos de éxito que hablan por sí mismos. Proyectos donde optimizamos
             procesos, incrementamos resultados y generamos crecimiento real
