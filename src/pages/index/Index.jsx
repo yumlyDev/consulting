@@ -58,7 +58,7 @@ function Index() {
           <Link to="/sesion">
             <img
               className="paneles"
-              src="soluciones/soporte.png"
+              src="/soluciones/soporte.png"
               alt="servicio de soporte"
             />
           </Link>

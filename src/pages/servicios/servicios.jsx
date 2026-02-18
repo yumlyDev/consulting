@@ -84,34 +84,34 @@ function Servicios() {
           <div className="paneles-container">
             <img
               className="paneles"
-              src="public/soluciones/continuidad.png"
+              src="/soluciones/continuidad.png"
               alt="continuidad"
             />
             <img
               className="paneles"
-              src="public/soluciones/eficiencia.png"
+              src="/soluciones/eficiencia.png"
               alt="Servicio de infraestructura"
             />
             <img
               className="paneles"
-              src="public/soluciones/escalabilidad.png"
+              src="/soluciones/escalabilidad.png"
               alt="Servicio de escalabilidad"
             />
           </div>
           <div className="paneles-container">
             <img
               className="paneles"
-              src="public/soluciones/proteccion.png"
+              src="/soluciones/proteccion.png"
               alt="proteccion"
             />
             <img
               className="paneles"
-              src="public/soluciones/insigths.png"
+              src="/soluciones/insigths.png"
               alt="insigths"
             />
             <img
               className="paneles"
-              src="public/soluciones/soporte.png"
+              src="/soluciones/soporte.png"
               alt="Soporte"
             />
           </div>
