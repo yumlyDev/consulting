@@ -1,11 +1,22 @@
 import Menu from "../../components/Menu.jsx";
 import Footer from "../../components/footer.jsx";
-
 import "./aviso.css";
+import { Helmet } from "react-helmet";
 
 function AvisoLegal() {
   return (
     <>
+      {/* SEO */}
+      <Helmet>
+        <title>Yumly Consulting - Aviso Legal</title>
+        <meta
+          name="description"
+          content="Aviso Legal de Yumly Consulting: información sobre titularidad, condiciones de uso, responsabilidad, propiedad intelectual, enlaces externos y protección de datos."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://consulting.yumly.es/avisolegal" />
+      </Helmet>
+
       <Menu />
       <div className="aviso-legal-page">
         <h1>Aviso Legal</h1>
@@ -83,6 +94,7 @@ function AvisoLegal() {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

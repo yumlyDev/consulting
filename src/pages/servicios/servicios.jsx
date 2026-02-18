@@ -1,6 +1,8 @@
 import "./servicios.css";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 function Servicios() {
   const location = useLocation();
 
@@ -11,13 +13,23 @@ function Servicios() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // Si no hay hash, ir al inicio de la página
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   return (
     <main>
+      {/* SEO */}
+      <Helmet>
+        <title>Yumly Consulting - Servicios de Transformación Digital</title>
+        <meta
+          name="description"
+          content="Servicios tecnológicos a medida: desarrollo de software, consultoría IT, ciberseguridad y soluciones escalables para tu empresa. Yumly Consulting transforma tu negocio digitalmente."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://consulting.yumly.es/servicios" />
+      </Helmet>
+
       <div>
         {/* Video de fondo */}
         <video className="video-bg" autoPlay loop muted playsInline>
@@ -25,12 +37,13 @@ function Servicios() {
           Tu navegador no soporta la etiqueta de video.
         </video>
       </div>
+
       <section className="servicios">
         <h1>Servicios de Transformación Digital y Soluciones Tecnológicas</h1>
         <p>
           Ofrecemos servicios tecnológicos a medida: desarrollo de software,
           consultoría IT, ciberseguridad y soluciones escalables para impulsar
-          la eficiencia y seguridad de tu empresa .
+          la eficiencia y seguridad de tu empresa.
         </p>
 
         <div className="paneles-container">
@@ -42,12 +55,12 @@ function Servicios() {
           <img
             className="paneles"
             src="/servicios/infra.png"
-            alt="Servicio de transformación digital"
+            alt="Servicio de infraestructura tecnológica"
           />
           <img
             className="paneles"
             src="/servicios/seguridad.png"
-            alt="Servicio de gestión y mantenimiento"
+            alt="Servicio de ciberseguridad"
           />
         </div>
 
@@ -60,9 +73,8 @@ function Servicios() {
           <img
             className="paneles"
             src="/servicios/consultorial.png"
-            alt="Servicio de desarrollo"
+            alt="Servicio de consultoría IT"
           />
-
           <img
             className="paneles"
             src="/servicios/gestion.png"
@@ -85,34 +97,34 @@ function Servicios() {
             <img
               className="paneles"
               src="/soluciones/continuidad.png"
-              alt="continuidad"
+              alt="Solución de continuidad"
             />
             <img
               className="paneles"
               src="/soluciones/eficiencia.png"
-              alt="Servicio de infraestructura"
+              alt="Solución de eficiencia"
             />
             <img
               className="paneles"
               src="/soluciones/escalabilidad.png"
-              alt="Servicio de escalabilidad"
+              alt="Solución de escalabilidad"
             />
           </div>
           <div className="paneles-container">
             <img
               className="paneles"
               src="/soluciones/proteccion.png"
-              alt="proteccion"
+              alt="Solución de protección"
             />
             <img
               className="paneles"
               src="/soluciones/insigths.png"
-              alt="insigths"
+              alt="Solución de insights"
             />
             <img
               className="paneles"
               src="/soluciones/soporte.png"
-              alt="Soporte"
+              alt="Servicio de soporte"
             />
           </div>
         </div>

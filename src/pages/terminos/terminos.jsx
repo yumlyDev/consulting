@@ -1,4 +1,5 @@
 import Menu from "../../components/Menu.jsx";
+import { Helmet } from "react-helmet";
 import "./terminos.css";
 
 function Terminos() {
@@ -102,7 +103,19 @@ function Terminos() {
 
   return (
     <>
+      {/* Meta para SEO */}
+      <Helmet>
+        <title>Yumly Consulting - Términos y Política de Privacidad</title>
+        <meta
+          name="description"
+          content="Consulta los términos de uso y la política de privacidad de Yumly IT Consulting. Transparencia y cumplimiento legal en servicios IT y desarrollo web."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://consulting.yumly.es/terminos" />
+      </Helmet>
+
       <Menu />
+
       {secciones.map((seccion, idx) => (
         <div className="terminos-page" key={idx}>
           <h1>{seccion.titulo}</h1>

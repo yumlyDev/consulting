@@ -1,10 +1,21 @@
-import Menu from "../../components/Menu.jsx";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "./index.css";
 
 function Index() {
   return (
     <div>
+      {/* Meta para SEO */}
+      <Helmet>
+        <title>Yumly Consulting - Transformamos ideas en resultados</title>
+        <meta
+          name="description"
+          content="Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://consulting.yumly.es/" />
+      </Helmet>
+
       {/* Video de fondo */}
       <video
         className="video-bg"
@@ -19,7 +30,7 @@ function Index() {
         Tu navegador no soporta la etiqueta de video.
       </video>
 
-      {/* Contenido */}
+      {/* Contenido principal */}
       <main>
         <section id="home">
           <h1>Transformamos ideas en resultados.</h1>
@@ -79,16 +90,16 @@ function Index() {
         </section>
 
         <section id="contact">
-          <h2>Casos de exito</h2>
+          <h2>Casos de éxito</h2>
           <p>
             Casos de éxito que hablan por sí mismos. Proyectos donde optimizamos
-            procesos, incrementamos resultados y generamos crecimiento real
+            procesos, incrementamos resultados y generamos crecimiento real.
           </p>
           <Link to="https://www.trainmovementscenter.es/">
             <img
               className="paneles"
               src="/tcm.png"
-              alt="fisioterapia TCM Alcorcon"
+              alt="fisioterapia TCM Alcorcón"
             />
           </Link>
         </section>
