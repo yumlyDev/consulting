@@ -30,7 +30,7 @@ function Servicios() {
         <p>
           Ofrecemos servicios tecnológicos a medida: desarrollo de software,
           consultoría IT, ciberseguridad y soluciones escalables para impulsar
-          la eficiencia y seguridad de tu empresa.
+          la eficiencia y seguridad de tu empresa .
         </p>
 
         <div className="paneles-container">
