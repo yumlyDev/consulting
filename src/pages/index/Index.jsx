@@ -72,7 +72,7 @@ function Index() {
           <Link to="/sesion">
             <img
               className="paneles"
-              src="git /soluciones/eficiencia.png"
+              src="/soluciones/eficiencia.png"
               alt="servicio de eficiencia"
             />
           </Link>
