@@ -79,7 +79,7 @@ function Index() {
         </section>
 
         <section id="contact">
-          <h2>Casos de exito</h2>
+          <h2>Casos de exito </h2>
           <p>
             Casos de éxito que hablan por sí mismos. Proyectos donde optimizamos
             procesos, incrementamos resultados y generamos crecimiento real
