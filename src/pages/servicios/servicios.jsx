@@ -36,17 +36,17 @@ function Servicios() {
         <div className="paneles-container">
           <img
             className="paneles"
-            src="public/servicios/dev.png"
+            src="/servicios/dev.png"
             alt="Servicio de desarrollo"
           />
           <img
             className="paneles"
-            src="public/servicios/infra.png"
+            src="/servicios/infra.png"
             alt="Servicio de transformación digital"
           />
           <img
             className="paneles"
-            src="public/servicios/seguridad.png"
+            src="/servicios/seguridad.png"
             alt="Servicio de gestión y mantenimiento"
           />
         </div>
@@ -54,18 +54,18 @@ function Servicios() {
         <div className="paneles-container">
           <img
             className="paneles"
-            src="public/servicios/transformacion.png"
+            src="/servicios/transformacion.png"
             alt="Servicio de transformación digital"
           />
           <img
             className="paneles"
-            src="public/servicios/consultorial.png"
+            src="/servicios/consultorial.png"
             alt="Servicio de desarrollo"
           />
 
           <img
             className="paneles"
-            src="public/servicios/gestion.png"
+            src="/servicios/gestion.png"
             alt="Servicio de gestión y mantenimiento"
           />
         </div>
