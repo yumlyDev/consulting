@@ -58,7 +58,7 @@ video.video-bg {
     padding: 0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: pointer ;
 }
 
 .paneles:hover {
