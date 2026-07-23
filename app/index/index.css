@@ -1,4 +1,13 @@
-video {
+
+main {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 120px;
+    
+}
+
+video.video-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,13 +15,6 @@ video {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
-
-main {
-    position: relative;
-    z-index: 1;
-    color: white;
-    padding-top: 120px;
 }
 
 #home {
@@ -24,7 +26,7 @@ main {
 #servicios {
     padding: 100px 20px;
     text-align: center;
-    background-color: rgba(34, 34, 34, 0.63); /* #222222a1 en rgba */
+    background-color: rgba(34, 34, 34, 0.63);
 }
 
 #soluciones {
@@ -38,35 +40,28 @@ main {
     background-color: rgba(34, 34, 34, 0.63);
 }
 
-.paneles {
-    border-radius: 20px;
-    margin: 20px;
-    padding: 0; /* auto no es válido */
-    box-shadow: 3px 3px 10px #000000;
-}
-/* paneles sigue igual */
 .paneles-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
 .paneles {
-  width: 260px;
-  height: 180px;
-  object-fit: contain;
-  background: white;
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 10px;
+    padding: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .paneles:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
 }

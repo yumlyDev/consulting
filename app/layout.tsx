@@ -1,5 +1,7 @@
+import "./globals.css";
 import Menu from "@/components/menu";
 import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: {
@@ -7,11 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>
+      <body suppressHydrationWarning>
         <Menu />
         {children}  {/* <--- SI ESTO NO ESTÁ, NADA SE VERÁ */}
         <Footer />
       </body>
     </html>
-  )
+  );
 }
