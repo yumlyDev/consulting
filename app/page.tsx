@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./page.css";
+import { Analytics } from '@vercel/analytics/next';
 
-// 1. Metadata nativa de Next.js (Sustituye a Helmet para title, description, Open Graph y Twitter)
 export const metadata: Metadata = {
   title: "Yumly Consulting - Transformamos ideas en resultados",
   description: "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
@@ -58,15 +61,11 @@ export default function Home() {
 
   return (
     <div>
-      {/* Schema.org Organization + WebSite */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ===================================== */}
-      {/* VIDEO DE FONDO */}
-      {/* ===================================== */}
       <video
         className="video-bg"
         autoPlay
@@ -80,21 +79,18 @@ export default function Home() {
         Tu navegador no soporta la etiqueta de video.
       </video>
 
-      {/* ===================================== */}
-      {/* CONTENIDO PRINCIPAL */}
-      {/* ===================================== */}
       <main>
-        {/* Home */}
         <section id="home">
           <h1>Transformamos ideas en resultados.</h1>
           <p>Tecnología, innovación y eficiencia para tu negocio.</p>
         </section>
+        
+        <Analytics />
 
-        {/* Servicios */}
         <section id="servicios">
           <h2>Servicios</h2>
           <p>Servicios tecnológicos eficientes, seguros y a medida.</p>
-          <Link href="/dev">
+          <Link href="/servicios/dev">
             <img
               className="paneles"
               src="/servicios/dev.png"
@@ -102,7 +98,7 @@ export default function Home() {
               loading="lazy"
             />
           </Link>
-          <Link href="/transformacion">
+          <Link href="/servicios/transformacion">
             <img
               className="paneles"
               src="/servicios/transformacion.png"
@@ -110,7 +106,7 @@ export default function Home() {
               loading="lazy"
             />
           </Link>
-          <Link href="/gestion">
+          <Link href="/servicios/gestion">
             <img
               className="paneles"
               src="/servicios/gestion.png"
@@ -120,11 +116,10 @@ export default function Home() {
           </Link>
         </section>
 
-        {/* Soluciones */}
         <section id="soluciones">
           <h2>Soluciones</h2>
           <p>Soluciones digitales pensadas para crecer contigo.</p>
-          <Link href="/sesion">
+          <Link href="/servicios/soporte">
             <img
               className="paneles"
               src="/soluciones/soporte.png"
@@ -132,7 +127,7 @@ export default function Home() {
               loading="lazy"
             />
           </Link>
-          <Link href="/sesion">
+          <Link href="/servicios/seguridad">
             <img
               className="paneles"
               src="/soluciones/proteccion.png"
@@ -140,7 +135,7 @@ export default function Home() {
               loading="lazy"
             />
           </Link>
-          <Link href="/sesion">
+          <Link href="/servicios/infra">
             <img
               className="paneles"
               src="/soluciones/eficiencia.png"
@@ -150,7 +145,6 @@ export default function Home() {
           </Link>
         </section>
 
-        {/* Casos de éxito */}
         <section id="contact">
           <h2>Casos de éxito</h2>
           <p>
