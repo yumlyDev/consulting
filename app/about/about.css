@@ -1,0 +1,159 @@
+.about-page {
+  /* Variables locales para esta página */
+  --primary: #0066ff;
+  --accent: #00ccff;
+  --bg-dark: #111111;
+  --bg-soft: #1c1c1c;
+  --card-bg: #222222;
+  --text-light: #ffffff;
+  --text-soft: #e0e0e0;
+  --radius: 14px;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+  --font: "Montserrat", sans-serif;
+
+  /* Base de la página */
+  font-family: var(--font);
+  color: var(--text-light);
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* ================= HERO ================= */
+/* Hero intacto */
+.about-page .about-hero {
+  padding: 4rem 2rem 2rem;
+  margin-top: 80px; /* para no taparlo con el menú */
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, #0066ff15, #00ccff15);
+}
+
+.about-page .about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.about-page .about-hero p {
+  font-size: 1.2rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ================= QUIÉN SOY ================= */
+.about-page .about-intro {
+  display: flex;
+  gap: 2rem;
+  max-width: var(--max-width);
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page .about-intro .intro-text {
+  flex: 1 1 300px;
+}
+
+.about-page .about-intro .intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.about-page .about-intro .intro-text p {
+  font-size: 1rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.about-page .about-intro .intro-image {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.about-page .about-intro .intro-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  max-width: 250px;
+}
+
+/* ================= CÓMO TRABAJAMOS ================= */
+.about-page .about-method {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-page .about-method .method-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about-page .about-method .method-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  flex: 1 1 250px;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-page .about-method .method-card h3 {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.about-page .about-method .method-card p {
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* ================= VISIÓN ================= */
+.about-page .about-vision {
+  max-width: 800px;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.about-page .about-vision h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.about-page .about-vision p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .about-page .about-intro {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-page .about-method .method-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-page .about-vision p,
+  .about-page .about-intro .intro-text p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,203 @@
+.desarrollo-page {
+  /* Variables locales */
+  --primary: #0066ff;
+  --accent: #00ccff;
+  --bg-dark: #111111;
+  --bg-soft: #1c1c1c;
+  --card-bg: #222222;
+  --text-light: #ffffff;
+  --text-soft: #e0e0e0;
+  --radius: 14px;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+  --font: "Montserrat", sans-serif;
+
+  font-family: var(--font);
+  color: var(--text-light);
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* ================= HERO ================= */
+
+.desarrollo-page .desarrollo-hero {
+  padding: 4rem 2rem 2rem;
+  margin-top: 80px;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, #0066ff15, #00ccff15);
+}
+
+.desarrollo-page .desarrollo-hero h1 {
+font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text; /* Chrome, Safari, Opera */
+  -webkit-text-fill-color: transparent; /* Chrome, Safari, Opera */
+  background-clip: text; /* Estándar para otros navegadores */
+  color: transparent; /* Fallback general */
+}
+
+.desarrollo-page .desarrollo-hero p {
+  font-size: 1.2rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================= SERVICIOS ================= */
+
+.desarrollo-page .desarrollo-servicios {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.desarrollo-page .servicios-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.desarrollo-page .servicio-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  flex: 1 1 250px;
+  min-width: 240px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.desarrollo-page .servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+.desarrollo-page .servicio-card h3 {
+  margin-bottom: 1rem;
+}
+
+.desarrollo-page .servicio-card p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ================= PROBLEMAS ================= */
+
+.desarrollo-page .desarrollo-problemas {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 3rem 1rem;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+}
+
+.desarrollo-page .desarrollo-problemas h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.desarrollo-page .problemas-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.desarrollo-page .problemas-list li {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  color: var(--text-soft);
+}
+
+/* ================= PROCESO ================= */
+
+.desarrollo-page .desarrollo-proceso {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.desarrollo-page .proceso-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.desarrollo-page .proceso-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  flex: 1 1 220px;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.desarrollo-page .proceso-card h3 {
+  margin-bottom: 1rem;
+}
+
+.desarrollo-page .proceso-card p {
+  color: var(--text-soft);
+}
+
+/* ================= CTA ================= */
+
+.desarrollo-page .desarrollo-cta {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius);
+}
+
+.desarrollo-page .desarrollo-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.desarrollo-page .cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: #ffffff;
+  color: #000;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.desarrollo-page .cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .desarrollo-page .servicios-grid,
+  .desarrollo-page .proceso-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .desarrollo-page .desarrollo-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .desarrollo-page .desarrollo-hero p {
+    font-size: 1rem;
+  }
+}

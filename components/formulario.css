@@ -1,0 +1,84 @@
+.form-wrapper {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid #333;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 50px auto;
+  transition: border 0.3s ease;
+}
+
+.form-wrapper:hover {
+  border-color: #39ff14; /* El verde neón de tu web */
+}
+
+.form-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-title span { color: #39ff14; }
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+  width: 100%;
+  background: #121212;
+  border: 1px solid #444;
+  color: white;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #39ff14;
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.2);
+  outline: none;
+}
+
+.neon-button {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.neon-button:hover {
+  background: #39ff14;
+  color: black;
+  box-shadow: 0 0 20px #39ff14;
+}
+/* Ajusta el contenedor del checkbox para que sea compacto */
+.checkbox-label {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el checkbox y el texto */
+  gap: 10px;           /* Controla la separación exacta entre el cuadro y el texto */
+  margin-top: 10px;
+   margin-bottom: 10px;
+  cursor: pointer;
+  color: #ffffff;      /* Asegura legibilidad */
+}
+
+/* Asegura que el checkbox no tenga márgenes extra que causen saltos de línea */
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;           /* Elimina márgenes predeterminados */
+  flex-shrink: 0;      /* Evita que el checkbox se deforme */
+}
+
+/* Estilo para el enlace dentro del label */
+.checkbox-label a {
+  color: #39ff14;      /* Color neón para que destaque sobre el fondo oscuro */
+  text-decoration: underline;
+}

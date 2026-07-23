@@ -1,0 +1,72 @@
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 120px;
+}
+
+#home {
+    padding: 100px 20px;
+    margin: 50px;
+    text-align: center;
+}
+
+#servicios {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.63); /* #222222a1 en rgba */
+}
+
+#soluciones {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#contact {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.63);
+}
+
+.paneles {
+    border-radius: 20px;
+    margin: 20px;
+    padding: 0; /* auto no es válido */
+    box-shadow: 3px 3px 10px #000000;
+}
+/* paneles sigue igual */
+.paneles-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.paneles {
+  width: 260px;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.paneles:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
