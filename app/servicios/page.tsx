@@ -1,6 +1,4 @@
-import "./servicios.css";
-import Link from "next/link";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Yumly Consulting - Servicios de Transformación Digital",
@@ -14,7 +12,11 @@ export const metadata: Metadata = {
     description: "Servicios tecnológicos a medida: desarrollo de software, consultoría IT, ciberseguridad y soluciones escalables para tu empresa.",
     url: "https://consulting.yumly.es/servicios",
     siteName: "Yumly Consulting",
-    images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
+    images: [
+      {
+        url: "https://consulting.yumly.es/ConsultingLogo.png",
+      },
+    ],
     locale: "es_ES",
     type: "website",
   },
@@ -24,6 +26,9 @@ export const metadata: Metadata = {
     description: "Servicios tecnológicos a medida: desarrollo de software, consultoría IT, ciberseguridad y soluciones escalables para tu empresa.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
@@ -74,56 +79,37 @@ export default function Servicios() {
         </p>
 
         <div className="paneles-container">
-          <Link href="/dev">
-            <img
-              className="paneles"
-              src="/servicios/dev.png"
-              alt="servicio de desarrollo"
-            />
-          </Link>
-          <Link href="/infraestructura">
-            <img
-              className="paneles"
-              src="/servicios/infra.png"
-              alt="Servicio de infraestructura tecnológica"
-            />
-          </Link>
-          <Link href="/seguridad-cumplimiento">
-            <img
-              className="paneles"
-              src="/servicios/seguridad.png"
-              alt="Servicio de ciberseguridad"
-            />
-          </Link>
+          <a href="/dev">
+            <img className="paneles" src="/servicios/dev.png" alt="servicio de desarrollo" />
+          </a>
+
+          <a href="/infraestructura">
+            <img className="paneles" src="/servicios/infra.png" alt="Servicio de infraestructura tecnológica" />
+          </a>
+
+          <a href="/seguridad-cumplimiento">
+            <img className="paneles" src="/servicios/seguridad.png" alt="Servicio de ciberseguridad" />
+          </a>
         </div>
 
         <div className="paneles-container">
-          <Link href="/transformacion">
-            <img
-              className="paneles"
-              src="/servicios/transformacion.png"
-              alt="Servicio de transformación digital"
-            />
-          </Link>
-          <Link href="/consultoria-tecnica">
-            <img
-              className="paneles"
-              src="/servicios/consultorial.png"
-              alt="Servicio de consultoría IT"
-            />
-          </Link>
-          <Link href="/gestion">
-            <img
-              className="paneles"
-              src="/servicios/gestion.png"
-              alt="Servicio de gestión y mantenimiento"
-            />
-          </Link>
+          <a href="/transformacion">
+            <img className="paneles" src="/servicios/transformacion.png" alt="Servicio de transformación digital" />
+          </a>
+
+          <a href="/consultoria-tecnica">
+            <img className="paneles" src="/servicios/consultorial.png" alt="Servicio de consultoría IT" />
+          </a>
+
+          <a href="/gestion">
+            <img className="paneles" src="/servicios/gestion.png" alt="Servicio de gestión y mantenimiento" />
+          </a>
         </div>
       </section>
 
       <section id="soluciones" className="servicios">
         <h1>Soluciones Tecnológicas para la Transformación Digital</h1>
+
         <p className="descripcion">
           Impulsamos la transformación digital de tu empresa mediante soluciones
           tecnológicas seguras, escalables y adaptadas a tus objetivos de
@@ -133,52 +119,31 @@ export default function Servicios() {
 
         <div>
           <div className="paneles-container">
-            <Link href="/infraestructura">
-              <img
-                className="paneles"
-                src="/soluciones/continuidad.png"
-                alt="Solución de continuidad"
-              />
-            </Link>
-            <Link href="/transformacion">
-              <img
-                className="paneles"
-                src="/soluciones/eficiencia.png"
-                alt="Solución de eficiencia"
-              />
-            </Link>
-            <Link href="/dev">
-              <img
-                className="paneles"
-                src="/soluciones/escalabilidad.png"
-                alt="Solución de escalabilidad"
-              />
-            </Link>
+            <a href="/infraestructura">
+              <img className="paneles" src="/soluciones/continuidad.png" alt="Solución de continuidad" />
+            </a>
+
+            <a href="/transformacion">
+              <img className="paneles" src="/soluciones/eficiencia.png" alt="Solución de eficiencia" />
+            </a>
+
+            <a href="/dev">
+              <img className="paneles" src="/soluciones/escalabilidad.png" alt="Solución de escalabilidad" />
+            </a>
           </div>
 
           <div className="paneles-container">
-            <Link href="/seguridad-cumplimiento">
-              <img
-                className="paneles"
-                src="/soluciones/proteccion.png"
-                alt="Solución de protección"
-              />
-            </Link>
+            <a href="/seguridad-cumplimiento">
+              <img className="paneles" src="/soluciones/proteccion.png" alt="Solución de protección" />
+            </a>
 
-            <Link href="/gestion">
-              <img
-                className="paneles"
-                src="/soluciones/insigths.png"
-                alt="Solución de insights"
-              />
-            </Link>
-            <Link href="/consultoria-tecnica">
-              <img
-                className="paneles"
-                src="/soluciones/soporte.png"
-                alt="Servicio de soporte"
-              />
-            </Link>
+            <a href="/gestion">
+              <img className="paneles" src="/soluciones/insigths.png" alt="Solución de insights" />
+            </a>
+
+            <a href="/consultoria-tecnica">
+              <img className="paneles" src="/soluciones/soporte.png" alt="Servicio de soporte" />
+            </a>
           </div>
         </div>
       </section>
