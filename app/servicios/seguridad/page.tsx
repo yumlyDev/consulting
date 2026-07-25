@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
-  description: "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+  description:
+    "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/seguridad",
   },
   openGraph: {
     title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
-    description: "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+    description:
+      "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
     url: "https://consulting.yumly.es/seguridad",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
@@ -20,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
-    description: "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+    description:
+      "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -31,23 +34,24 @@ export default function SeguridadCumplimiento() {
     "@graph": [
       {
         "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": "https://consulting.yumly.es/ConsultingLogo.png",
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        description:
+          "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales.",
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
-  };
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  } as const;
 
   return (
     <main className="seguridad-page">

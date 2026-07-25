@@ -1,11 +1,12 @@
-"use client"; // Necesario para usar usePathname
+"use client";
 
-import { usePathname } from "next/navigation"; // Cambiado de react-router-dom
+import { usePathname } from "next/navigation";
 import "./OcasoBanner.css";
 
-const OcasoBanner = () => {
-  const pathname = usePathname(); // Reemplaza a useLocation
-  const rutasPermitidas = [
+export default function OcasoBanner() {
+  const pathname = usePathname();
+
+  const rutasPermitidas: string[] = [
     "/servicios",
     "/soluciones",
     "/dev",
@@ -34,14 +35,10 @@ const OcasoBanner = () => {
 
       <button
         className="ocaso-btn"
-        // En Next.js, lo ideal es usar el componente Link para navegación interna,
-        // pero para un botón fuera de un Link, esto funciona:
         onClick={() => (window.location.href = "/contacto")}
       >
         Más información <span>→</span>
       </button>
     </div>
   );
-};
-
-export default OcasoBanner;
+}

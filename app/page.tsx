@@ -1,18 +1,21 @@
 import Link from "next/link";
 import type { Metadata, Viewport } from "next";
 import "./page.css";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import OcasoBanner from "@/components/OcasoBanner";
 
 export const metadata: Metadata = {
   title: "Yumly Consulting - Transformamos ideas en resultados",
-  description: "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
+  description:
+    "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/",
   },
   openGraph: {
     title: "Yumly Consulting - Transformamos ideas en resultados",
-    description: "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
+    description:
+      "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
     url: "https://consulting.yumly.es/",
     siteName: "Yumly Consulting",
     images: [
@@ -26,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Yumly Consulting - Transformamos ideas en resultados",
-    description: "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
+    description:
+      "Tecnología, innovación y eficiencia para tu negocio. Consultoría tecnológica y desarrollo web a medida.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -41,23 +45,24 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": "https://consulting.yumly.es/ConsultingLogo.png",
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        description:
+          "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales.",
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
-  };
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  } as const;
 
   return (
     <div>
@@ -84,7 +89,7 @@ export default function Home() {
           <h1>Transformamos ideas en resultados.</h1>
           <p>Tecnología, innovación y eficiencia para tu negocio.</p>
         </section>
-        
+
         <Analytics />
 
         <section id="servicios">
@@ -148,9 +153,14 @@ export default function Home() {
         <section id="contact">
           <h2>Casos de éxito</h2>
           <p>
-            Proyectos donde optimizamos procesos, incrementamos resultados y generamos crecimiento real.
+            Proyectos donde optimizamos procesos, incrementamos resultados y
+            generamos crecimiento real.
           </p>
-          <a href="https://www.trainmovementscenter.es/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.trainmovementscenter.es/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="paneles"
               src="/tcm.png"
@@ -159,6 +169,7 @@ export default function Home() {
             />
           </a>
         </section>
+        <OcasoBanner />
       </main>
     </div>
   );
