@@ -123,3 +123,27 @@ main {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
 }
+#home button {
+  margin-top: 2rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+#home button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
+  background: linear-gradient(135deg, #33edff 0%, #005bb5 100%);
+}
+
+#home button:active {
+  transform: translateY(-1px);
+}

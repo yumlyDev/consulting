@@ -13,7 +13,7 @@ export default function ContactForm() {
     nombre: "",
     email: "",
     telefono: "",
-    subject: "readaptabilidad",
+    subject: "Consulta",
     mensaje: "",
     acceptTerms: false,
   });
@@ -36,8 +36,8 @@ export default function ContactForm() {
     if (form.current) {
       emailjs
         .sendForm(
-          "service_6hxe3ak",
-          "template_6no0czq",
+          "service_okfb1vg", // <-- Cambiado al nuevo ID de servicio SMTP
+          "template_g1un34g",
           form.current,
           "F3VvO9y1NuAjdecS-",
         )
@@ -84,10 +84,11 @@ export default function ContactForm() {
         />
 
         <select name="subject" value={formData.subject} onChange={handleChange}>
-          <option value="valoracion">Valoración</option>
-          <option value="rendimiento">Rendimiento</option>
-          <option value="readaptabilidad">Readaptabilidad</option>
-          <option value="fisioterapia">Fisioterapia</option>
+          <option value="Desarrollo">Desarrollo</option>
+          <option value="Seguridad">Seguridad</option>
+          <option value="Infraestructura">Infraestructura</option>
+          <option value="Mantenimiento">Mantenimiento</option>
+          <option value="Consultas">Consultas</option>
         </select>
 
         <textarea

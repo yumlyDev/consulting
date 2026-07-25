@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "./page.css";
 import { Analytics } from "@vercel/analytics/next";
 import Image from "next/image";
-
+import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Yumly Consulting | Desarrollo Web y Consultoría IT en España",
   description:
@@ -142,6 +142,7 @@ export default function Home() {
             tecnológicas avanzadas, desarrollo full-stack escalable y
             optimización de infraestructuras.
           </p>
+          <button> Solicita información</button>
         </section>
 
         <Analytics />
@@ -258,7 +259,7 @@ export default function Home() {
             <span className="tech-badge">Ciberseguridad</span>
           </div>
         </section>
-
+        <ContactForm />
         <section id="contact">
           <h2>Casos de Éxito y Proyectos Reales</h2>
           <p>

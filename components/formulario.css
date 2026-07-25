@@ -1,4 +1,13 @@
 .form-wrapper {
+  /* Definimos las variables directamente aquí para que el scope las reconozca */
+  --primary: #0066ff;
+  --accent: #00ccff;
+  --bg-dark: #111111;
+  --bg-soft: #1c1c1c;
+  --card-bg: #222222;
+  --text-light: #ffffff;
+  --text-soft: #e0e0e0;
+
   background: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid #333;
@@ -10,34 +19,38 @@
 }
 
 .form-wrapper:hover {
-  border-color: #39ff14; /* El verde neón de tu web */
+  border: solid 2px;
+  border-color: var(--primary);
 }
 
 .form-title {
-  color: white;
+  color: var(--text-light);
   text-align: center;
   margin-bottom: 30px;
 }
 
-.form-title span { color: #39ff14; }
+.form-title span {
+  color: var(--accent);
+}
 
-.contact-form input, 
-.contact-form select, 
+.contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   background: #121212;
   border: 1px solid #444;
-  color: white;
+  color: var(--text-light);
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
   transition: 0.3s;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: #39ff14;
-  box-shadow: 0 0 8px rgba(57, 255, 20, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--accent); /* Corregido para que la sombra funcione correctamente */
   outline: none;
 }
 
@@ -45,8 +58,8 @@
   width: 100%;
   padding: 15px;
   background: transparent;
-  border: 2px solid #39ff14;
-  color: #39ff14;
+  border: 2px solid var(--primary);
+  color: var(--accent);
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
@@ -54,31 +67,32 @@
 }
 
 .neon-button:hover {
-  background: #39ff14;
+  background: var(--accent);
   color: black;
-  box-shadow: 0 0 20px #39ff14;
+  box-shadow: 0 0 20px var(--accent);
 }
+
 /* Ajusta el contenedor del checkbox para que sea compacto */
 .checkbox-label {
   display: flex;
-  align-items: center; /* Alinea verticalmente el checkbox y el texto */
-  gap: 10px;           /* Controla la separación exacta entre el cuadro y el texto */
+  align-items: center;
+  gap: 10px;
   margin-top: 10px;
-   margin-bottom: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  color: #ffffff;      /* Asegura legibilidad */
+  color: var(--text-light);
 }
 
 /* Asegura que el checkbox no tenga márgenes extra que causen saltos de línea */
 .checkbox-label input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  margin: 0;           /* Elimina márgenes predeterminados */
-  flex-shrink: 0;      /* Evita que el checkbox se deforme */
+  margin: 0;
+  flex-shrink: 0;
 }
 
 /* Estilo para el enlace dentro del label */
 .checkbox-label a {
-  color: #39ff14;      /* Color neón para que destaque sobre el fondo oscuro */
+  color: var(--accent);
   text-decoration: underline;
 }

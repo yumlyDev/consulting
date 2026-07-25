@@ -16,10 +16,10 @@ export default function Contacto() {
 
     emailjs
       .sendForm(
-        "service_l77qfom",
+        "service_okfb1vg", // <-- Cambiado al nuevo ID de servicio SMTP
         "template_g1un34g",
         form,
-        "F3VvO9y1NuAjdecS-"
+        "F3VvO9y1NuAjdecS-",
       )
       .then(
         (result) => {
@@ -37,7 +37,7 @@ export default function Contacto() {
             error: true,
           });
           setLoading(false);
-        }
+        },
       );
   };
 
@@ -48,9 +48,9 @@ export default function Contacto() {
         <div className="hero-content">
           <h1>Hablemos de tu proyecto</h1>
           <p>
-            Cuéntanos tus ideas y necesidades. En Yumly Consulting
-            transformamos tus proyectos en soluciones digitales seguras,
-            escalables y orientadas a resultados.
+            Cuéntanos tus ideas y necesidades. En Yumly Consulting transformamos
+            tus proyectos en soluciones digitales seguras, escalables y
+            orientadas a resultados.
           </p>
         </div>
       </section>
