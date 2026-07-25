@@ -70,6 +70,7 @@ export default function ContactForm() {
         ¿Listo para mejorar? <span>Contáctanos</span>
       </h2>
       <form ref={form} className="contact-form" onSubmit={enviarFormulario}>
+        <span className="form-label-text">Formulario de contacto</span>
         <input
           type="text"
           name="nombre"
