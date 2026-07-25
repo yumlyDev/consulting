@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useRef, ChangeEvent } from "react";
 import emailjs from "@emailjs/browser";
 import "./formulario.css";
@@ -6,14 +7,13 @@ import "./formulario.css";
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
   const [mensajeStatus, setMensajeStatus] = useState<string>("");
-  // AÑADE ESTA LÍNEA QUE TE FALTABA
   const [enviando, setEnviando] = useState(false);
 
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
-    subject: "Consulta",
+    subject: "Desarrollo", // Inicializado con un valor válido del select
     mensaje: "",
     acceptTerms: false,
   });
@@ -31,12 +31,12 @@ export default function ContactForm() {
 
   const enviarFormulario = (e: React.FormEvent) => {
     e.preventDefault();
-    setEnviando(true); // Activamos el estado de carga
+    setEnviando(true);
 
     if (form.current) {
       emailjs
         .sendForm(
-          "service_okfb1vg", // <-- Cambiado al nuevo ID de servicio SMTP
+          "service_okfb1vg",
           "template_g1un34g",
           form.current,
           "F3VvO9y1NuAjdecS-",
@@ -44,12 +44,21 @@ export default function ContactForm() {
         .then(
           () => {
             setMensajeStatus("¡Mensaje enviado con éxito!");
-            setEnviando(false); // Desactivamos al terminar
+            setEnviando(false);
             form.current?.reset();
+            // Opcional: reiniciamos el estado del form por completo
+            setFormData({
+              nombre: "",
+              email: "",
+              telefono: "",
+              subject: "Desarrollo",
+              mensaje: "",
+              acceptTerms: false,
+            });
           },
           (error) => {
             setMensajeStatus("Error al enviar: " + error.text);
-            setEnviando(false); // Desactivamos al fallar
+            setEnviando(false);
           },
         );
     }
@@ -64,6 +73,7 @@ export default function ContactForm() {
         <input
           type="text"
           name="nombre"
+          value={formData.nombre}
           placeholder="Nombre completo"
           required
           onChange={handleChange}
@@ -71,6 +81,7 @@ export default function ContactForm() {
         <input
           type="email"
           name="email"
+          value={formData.email}
           placeholder="Correo electrónico"
           required
           onChange={handleChange}
@@ -78,6 +89,7 @@ export default function ContactForm() {
         <input
           type="tel"
           name="telefono"
+          value={formData.telefono}
           placeholder="Teléfono"
           required
           onChange={handleChange}
@@ -93,6 +105,7 @@ export default function ContactForm() {
 
         <textarea
           name="mensaje"
+          value={formData.mensaje}
           placeholder="¿Cómo podemos ayudarte?"
           required
           onChange={handleChange}

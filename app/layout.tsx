@@ -3,6 +3,14 @@ import "./page.css";
 import Menu from "@/components/menu";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  display: "swap",
+  variable: "--font-montserrat", // Definimos la variable
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://consulting.yumly.es"),
@@ -57,7 +65,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es">
+    <html lang="es" className={montserrat.variable}>
       <head>
         <script
           type="application/ld+json"

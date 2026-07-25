@@ -4,6 +4,7 @@ import "./page.css";
 import { Analytics } from "@vercel/analytics/next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+
 export const metadata: Metadata = {
   title: "Yumly Consulting | Desarrollo Web y Consultoría IT en España",
   description:

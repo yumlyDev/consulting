@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
-
 /* Header y cabecera */
 .cabeceraaback {
   position: fixed;
@@ -11,7 +9,7 @@
   align-items: center;
   padding: 20px 50px;
   z-index: 10;
-  background-color: rgb(185, 185, 185); /* semitransparente */
+  background-color: rgb(185, 185, 185);
   font-family: "Montserrat", sans-serif;
   box-shadow: 50px 5px 50px black;
 }
@@ -32,7 +30,7 @@
 .menu a {
   text-decoration: none;
   color: #002c6b;
-  font-weight: 700; /* negrita */
+  font-weight: 700;
   padding: 10px 14px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -73,6 +71,7 @@
   background: rgba(192, 201, 219, 0.9);
   color: #002c6b;
 }
+
 /* botón hamburguesa oculto por defecto */
 .menu-toggle {
   display: none;
@@ -86,18 +85,17 @@
 /* media queries para móvil */
 @media (max-width: 700px) {
   .menu {
-    display: none; /* oculto por defecto */
+    display: none;
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 70px; /* debajo del header */
+    top: 70px;
     left: 0;
     background-color: #f0f0f0;
     padding: 10px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
-  /* se muestra cuando el botón hamburguesa es pulsado */
   .menu.open {
     display: flex;
   }
@@ -107,7 +105,6 @@
     border-bottom: 1px solid #ddd;
   }
 
-  /* botón visible en móvil */
   .menu-toggle {
     display: block;
   }
