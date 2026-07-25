@@ -1,23 +1,33 @@
-
-
-.servicios, .soluciones {
+.servicios,
+.soluciones {
   padding: 100px 20px;
   text-align: center;
   background-color: rgba(34, 34, 34, 0.63);
-
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.servicios h1, .soluciones h1 {
-  font-size: 3rem; /* más flexible que 48px fijo */
+.servicios h1,
+.soluciones h1 {
+  font-size: 3rem;
   margin: 0 0 20px;
-
 }
 
 .descripcion {
-
-  text-align: center; /* centra el texto dentro del bloque */
-  width: 50%;         /* ancho del bloque */
+  text-align: center;
+  width: 50%;
   padding: 10px;
-  margin: 0 auto;     /* centra el bloque horizontalmente */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
+@media (max-width: 900px) {
+  .descripcion {
+    width: 85%;
+  }
+
+  .servicios h1,
+  .soluciones h1 {
+    font-size: 2.2rem;
+  }
 }

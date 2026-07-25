@@ -3,15 +3,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-  description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+  description:
+    "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
   robots: "index, follow",
   alternates: {
-    canonical: "https://consulting.yumly.es/infraestructura",
+    canonical: "https://consulting.yumly.es/gestion",
   },
   openGraph: {
     title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-    description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
-    url: "https://consulting.yumly.es/infraestructura",
+    description:
+      "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+    url: "https://consulting.yumly.es/gestion",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
     locale: "es_ES",
@@ -20,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-    description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+    description:
+      "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -30,23 +33,33 @@ export default function Gestion() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": "https://consulting.yumly.es/ConsultingLogo.png",
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        "@type": "Service",
+        name: "Gestión y Mantenimiento Tecnológico",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Yumly Consulting",
+          url: "https://consulting.yumly.es",
+          logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        },
+        description:
+          "Gestión profesional de servidores, cloud, redes y mantenimiento informático para empresas en Madrid.",
+        url: "https://consulting.yumly.es/gestion",
+        areaServed: {
+          "@type": "AdministrativeArea",
+          name: "Madrid",
+        },
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (
@@ -84,14 +97,16 @@ export default function Gestion() {
           <div className="servicio-card">
             <h3>Gestión de Bases de Datos</h3>
             <p>
-              Optimización de consultas, copias de seguridad y mantenimiento de bases de datos.
+              Optimización de consultas, copias de seguridad y mantenimiento de
+              bases de datos.
             </p>
           </div>
 
           <div className="servicio-card">
             <h3>Infraestructura y Cloud</h3>
             <p>
-              Configuración de servidores VPS y despliegue en entornos cloud para aplicaciones web.
+              Configuración de servidores VPS y despliegue en entornos cloud
+              para aplicaciones web.
             </p>
           </div>
         </div>
@@ -141,7 +156,8 @@ export default function Gestion() {
           <div className="proceso-card">
             <h3>4. Soporte Continuo</h3>
             <p>
-              Mantenimiento y mejoras evolutivas según las necesidades del proyecto.
+              Mantenimiento y mejoras evolutivas según las necesidades del
+              proyecto.
             </p>
           </div>
         </div>

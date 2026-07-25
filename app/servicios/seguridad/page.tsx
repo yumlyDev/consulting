@@ -2,17 +2,17 @@ import "./seguridad.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
+  title: "Ciberseguridad y Cumplimiento Normativo | Yumly Consulting",
   description:
-    "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+    "Servicios de ciberseguridad, auditorías y cumplimiento normativo para proteger los sistemas e información de tu empresa.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/seguridad",
   },
   openGraph: {
-    title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
+    title: "Ciberseguridad y Cumplimiento Normativo | Yumly Consulting",
     description:
-      "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+      "Servicios de ciberseguridad, auditorías y cumplimiento normativo para proteger los sistemas e información de tu empresa.",
     url: "https://consulting.yumly.es/seguridad",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seguridad y Cumplimiento Tecnológico | Yumly Consulting",
+    title: "Ciberseguridad y Cumplimiento Normativo | Yumly Consulting",
     description:
-      "Aplicación de buenas prácticas de seguridad en aplicaciones web para reducir riesgos y proteger la información.",
+      "Servicios de ciberseguridad, auditorías y cumplimiento normativo para proteger los sistemas e información de tu empresa.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -33,12 +33,21 @@ export default function SeguridadCumplimiento() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        name: "Yumly Consulting",
-        url: "https://consulting.yumly.es",
-        logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        "@type": "Service",
+        name: "Ciberseguridad y Cumplimiento",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Yumly Consulting",
+          url: "https://consulting.yumly.es",
+          logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        },
         description:
-          "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales.",
+          "Aplicación de buenas prácticas de seguridad y cumplimiento normativo en aplicaciones web y sistemas.",
+        url: "https://consulting.yumly.es/seguridad",
+        areaServed: {
+          "@type": "Country",
+          name: "Spain",
+        },
       },
       {
         "@type": "WebSite",

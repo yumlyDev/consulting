@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-  description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+  description:
+    "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/infraestructura",
   },
   openGraph: {
     title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-    description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+    description:
+      "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
     url: "https://consulting.yumly.es/infraestructura",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
@@ -20,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Configuración de Servidores y Entornos Cloud | Yumly Consulting",
-    description: "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
+    description:
+      "Gestión profesional de servidores, cloud, redes y automatización para empresas. Seguridad, rendimiento y disponibilidad garantizados.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -30,23 +33,33 @@ export default function InfraestructuraCloud() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": "https://consulting.yumly.es/ConsultingLogo.png",
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        "@type": "Service",
+        name: "Infraestructura y Cloud",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Yumly Consulting",
+          url: "https://consulting.yumly.es",
+          logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        },
+        description:
+          "Configuración de servidores, entornos cloud, redes y automatización para empresas.",
+        url: "https://consulting.yumly.es/infraestructura",
+        areaServed: {
+          "@type": "AdministrativeArea",
+          name: "Madrid",
+        },
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (

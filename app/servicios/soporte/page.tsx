@@ -3,14 +3,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Consultoría Técnica IT | Yumly Consulting",
-  description: "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
+  description:
+    "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/consultoria-tecnica",
   },
   openGraph: {
     title: "Consultoría Técnica IT | Yumly Consulting",
-    description: "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
+    description:
+      "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
     url: "https://consulting.yumly.es/consultoria-tecnica",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
@@ -20,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Consultoría Técnica IT | Yumly Consulting",
-    description: "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
+    description:
+      "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento en tu empresa.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -32,23 +35,33 @@ export default function ConsultoriaTecnica() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": logo,
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        "@type": "Service",
+        name: "Consultoría Técnica IT",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Yumly Consulting",
+          url: "https://consulting.yumly.es",
+          logo: logo,
+        },
+        description:
+          "Orientación técnica profesional para mejorar aplicaciones web, optimizar infraestructura y resolver problemas de rendimiento.",
+        url: "https://consulting.yumly.es/consultoria-tecnica",
+        areaServed: {
+          "@type": "Country",
+          name: "Spain",
+        },
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (
@@ -63,7 +76,8 @@ export default function ConsultoriaTecnica() {
         <h1>Consultoría Técnica para tu Empresa</h1>
         <p>
           Orientación técnica profesional para mejorar aplicaciones web,
-          optimizar infraestructura y resolver problemas de rendimiento en tu empresa.
+          optimizar infraestructura y resolver problemas de rendimiento en tu
+          empresa.
         </p>
         <a href="/contacto" className="cta-btn">
           Solicitar información

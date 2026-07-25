@@ -2,15 +2,17 @@ import "./dev.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Desarrollo Web y Automatización en Madrid | Yumly Consulting",
-  description: "Desarrollo de aplicaciones web y automatización de procesos en Madrid. Soluciones a medida con enfoque técnico en sistemas e infraestructura.",
+  title: "Desarrollo Web y Automatización de Procesos | Yumly Consulting",
+  description:
+    "Desarrollo de aplicaciones web a medida y automatización de procesos para empresas. Soluciones escalables con enfoque técnico en sistemas e infraestructura.",
   robots: "index, follow",
   alternates: {
     canonical: "https://consulting.yumly.es/dev",
   },
   openGraph: {
-    title: "Desarrollo Web y Automatización en Madrid | Yumly Consulting",
-    description: "Desarrollo de aplicaciones web y automatización de procesos en Madrid. Soluciones a medida con enfoque técnico en sistemas e infraestructura.",
+    title: "Desarrollo Web y Automatización de Procesos | Yumly Consulting",
+    description:
+      "Desarrollo de aplicaciones web a medida y automatización de procesos para empresas. Soluciones escalables con enfoque técnico en sistemas e infraestructura.",
     url: "https://consulting.yumly.es/dev",
     siteName: "Yumly Consulting",
     images: [{ url: "https://consulting.yumly.es/ConsultingLogo.png" }],
@@ -19,8 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Desarrollo Web y Automatización en Madrid | Yumly Consulting",
-    description: "Desarrollo de aplicaciones web y automatización de procesos en Madrid. Soluciones a medida con enfoque técnico en sistemas e infraestructura.",
+    title: "Desarrollo Web y Automatización de Procesos | Yumly Consulting",
+    description:
+      "Desarrollo de aplicaciones web a medida y automatización de procesos para empresas. Soluciones escalables con enfoque técnico en sistemas e infraestructura.",
     images: ["https://consulting.yumly.es/ConsultingLogo.png"],
   },
 };
@@ -30,23 +33,33 @@ export default function DesarrolloSoftware() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "logo": "https://consulting.yumly.es/ConsultingLogo.png",
-        "description": "Consultoría tecnológica especializada en desarrollo web, SEO y soluciones digitales."
+        "@type": "Service",
+        name: "Desarrollo Web y Automatización",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Yumly Consulting",
+          url: "https://consulting.yumly.es",
+          logo: "https://consulting.yumly.es/ConsultingLogo.png",
+        },
+        description:
+          "Desarrollo de aplicaciones web a medida y automatización de procesos con enfoque técnico.",
+        url: "https://consulting.yumly.es/dev",
+        areaServed: {
+          "@type": "Country",
+          name: "Spain",
+        },
       },
       {
         "@type": "WebSite",
-        "name": "Yumly Consulting",
-        "url": "https://consulting.yumly.es",
-        "potentialAction": {
+        name: "Yumly Consulting",
+        url: "https://consulting.yumly.es",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://consulting.yumly.es/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
+          target: "https://consulting.yumly.es/?s={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (
@@ -58,7 +71,7 @@ export default function DesarrolloSoftware() {
 
       {/* HERO */}
       <section className="desarrollo-hero">
-        <h1>Desarrollo Web y Automatización para Empresas en Madrid</h1>
+        <h1>Desarrollo Web y Automatización para Empresas</h1>
         <p>
           Desarrollo aplicaciones web a medida y soluciones de automatización
           enfocadas a mejorar procesos internos. Soluciones prácticas,
@@ -121,7 +134,8 @@ export default function DesarrolloSoftware() {
           <div className="proceso-card">
             <h3>1. Análisis Técnico Real</h3>
             <p>
-              Analizar tu situación actual y tus necesidades para proponer una solución adecuada.
+              Analizar tu situación actual y tus necesidades para proponer una
+              solución adecuada.
             </p>
           </div>
 
@@ -144,7 +158,8 @@ export default function DesarrolloSoftware() {
           <div className="proceso-card">
             <h3>4. Soporte Continuo</h3>
             <p>
-              Mantenimiento y mejoras evolutivas según las necesidades del proyecto.
+              Mantenimiento y mejoras evolutivas según las necesidades del
+              proyecto.
             </p>
           </div>
         </div>
