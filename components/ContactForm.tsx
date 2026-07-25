@@ -13,7 +13,7 @@ export default function ContactForm() {
     nombre: "",
     email: "",
     telefono: "",
-    subject: "Desarrollo", // Inicializado con un valor válido del select
+    subject: "Desarrollo", // Inicializa do con un valor válido del select
     mensaje: "",
     acceptTerms: false,
   });
