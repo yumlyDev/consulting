@@ -32,7 +32,7 @@ function Menu() {
         <Link href="/servicios">Servicios</Link>
         <Link href="/servicios#soluciones">Soluciones</Link>
         <Link href="/about">Sobre nosotros</Link>
-        <Link href="/Socios">Socios</Link>
+        <Link href="/sesion">Socios</Link>
         <Link href="/contacto">Contacto</Link>
       </nav>
     </header>

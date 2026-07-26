@@ -1,0 +1,111 @@
+.login-wrapper {
+  --principal: #013767;
+  --primary: #0066ff;
+  --accent: #00ccff;
+  --bg-dark: #111111;
+  --bg-soft: #1c1c1c;
+  --card-bg: #222222;
+  --text-light: #ffffff;
+  --text-soft: #e0e0e0;
+  --radius: 14px;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+  --font: "Montserrat", sans-serif;
+
+  font-family: var(--font);
+  color: var(--text-light);
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 204, 255, 0.15);
+  border-radius: var(--radius);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: var(--transition);
+}
+
+.login-card:hover {
+  border-color: rgba(0, 204, 255, 0.3);
+}
+
+.login-title {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-title span {
+  color: var(--accent);
+}
+
+.login-subtitle {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  color: var(--text-light);
+  font-family: var(--font);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.2);
+}
+
+.input-group input::placeholder {
+  color: var(--text-soft);
+  opacity: 0.6;
+}
+
+.neon-button {
+  background: linear-gradient(135deg, var(--principal), var(--primary));
+  color: var(--text-light);
+  border: none;
+  padding: 14px;
+  font-family: var(--font);
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+.neon-button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+  transform: translateY(-2px);
+}

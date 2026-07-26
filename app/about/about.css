@@ -1,5 +1,6 @@
 .about-page {
   /* Variables locales para esta página */
+  --principal: #013767;
   --primary: #0066ff;
   --accent: #00ccff;
   --bg-dark: #111111;
