@@ -29,7 +29,7 @@ export default function Login() {
     if (email === "alejandroherrera@yumly.es") {
       window.location.href = "/crm/administracion";
     } else {
-      window.location.href = "/crm/clientes";
+      window.location.href = "/crm/portal";
     }
   };
 

@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-
+import MenuAdmin from "@/components/menuadministracion/menuadmin"; // O la ruta de importación que uses
 import "./admin.css";
 import Link from "next/link";
-import MenuAdmin from "@/components/menuadministracion/menuadmin"; // O la ruta de importación que uses
 export default function AdminPanelPage() {
   return (
     <div className="admin-wrapper">

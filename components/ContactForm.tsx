@@ -71,32 +71,44 @@ export default function ContactForm() {
       </h2>
       <form ref={form} className="contact-form" onSubmit={enviarFormulario}>
         <span className="form-label-text">Formulario de contacto</span>
+
         <input
           type="text"
           name="nombre"
           value={formData.nombre}
           placeholder="Nombre completo"
+          aria-label="Nombre completo"
           required
           onChange={handleChange}
         />
+
         <input
           type="email"
           name="email"
           value={formData.email}
           placeholder="Correo electrónico"
+          aria-label="Correo electrónico"
           required
           onChange={handleChange}
         />
+
         <input
           type="tel"
           name="telefono"
           value={formData.telefono}
           placeholder="Teléfono"
+          aria-label="Teléfono"
           required
           onChange={handleChange}
         />
 
-        <select name="subject" value={formData.subject} onChange={handleChange}>
+        <label htmlFor="subject-select">Servicios</label>
+        <select
+          id="subject-select"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+        >
           <option value="Desarrollo">Desarrollo</option>
           <option value="Seguridad">Seguridad</option>
           <option value="Infraestructura">Infraestructura</option>
@@ -108,6 +120,7 @@ export default function ContactForm() {
           name="mensaje"
           value={formData.mensaje}
           placeholder="¿Cómo podemos ayudarte?"
+          aria-label="Mensaje"
           required
           onChange={handleChange}
         ></textarea>
