@@ -10,9 +10,11 @@ export default async function proxy(request: NextRequest) {
       return NextResponse.next();
     }
 
-    await supabase.from('access_logs').insert([{ ip }]);
+    const ruta = request.nextUrl.pathname;
+
+    await supabase.from('access_logs').insert([{ ip, ruta }]);
   } catch (error) {
-    // Silenciamos errores
+    // Silenciar errores
   }
 
   return NextResponse.next();
@@ -20,6 +22,13 @@ export default async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    /*
+     * Coincide solo con las rutas de páginas, excluyendo:
+     * - api (rutas de API)
+     * - _next/static (archivos estáticos)
+     * - _next/image (optimización de imágenes)
+     * - favicon.ico, archivos comunes (png, jpg, css, js, etc.)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js)).*)',
   ],
 };
