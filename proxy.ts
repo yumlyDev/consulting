@@ -1,8 +1,8 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
-// Almacén temporal en memoria para controlar la última vez que una IP registró una visita
-const recentIps = new Map<string, number>();
+// Guarda el último registro y el contador de peticiones por IP
+const ipTracker = new Map<string, { lastLog: number; hits: number }>();
 
 export default async function proxy(request: NextRequest) {
   try {
@@ -12,16 +12,25 @@ export default async function proxy(request: NextRequest) {
       '0.0.0.0';
 
     const now = Date.now();
-    const lastAccess = recentIps.get(ip) || 0;
+    const data = ipTracker.get(ip) || { lastLog: 0, hits: 0 };
 
-    // Si la misma IP hace otra petición antes de 5 segundos, la ignoramos para evitar duplicados por F5 o navegación
-    if (now - lastAccess < 5000) {
-      return NextResponse.next();
+    // Si pasaron más de 60 segundos (60000 ms), reiniciamos y guardamos la visita
+    if (now - data.lastLog > 60000) {
+      data.hits = 1;
+      data.lastLog = now;
+      
+      const pais = request.headers.get('x-vercel-ip-country') || 'Desconocido';
+      await supabase.from('access_logs').insert([{ ip, pais }]);
+    } else {
+      data.hits++;
+      
+      // Si hace más de 30 peticiones en menos de 60 segundos, se bloquea el acceso
+      if (data.hits > 30) {
+        return new NextResponse('Acceso bloqueado por exceso de peticiones.', { status: 429 });
+      }
     }
 
-    recentIps.set(ip, now);
-
-    await supabase.from('access_logs').insert([{ ip }]);
+    ipTracker.set(ip, data);
   } catch (error) {
     // Silenciar errores
   }
