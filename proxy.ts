@@ -3,18 +3,14 @@ import { supabase } from '@/lib/supabase';
 
 export default async function proxy(request: NextRequest) {
   try {
-    const forwardedFor = request.headers.get('x-forwarded-for');
-    const ip = forwardedFor ? forwardedFor.split(',')[0].trim() : '127.0.0.1';
-    const ruta = request.nextUrl.pathname;
+    const ip = 
+      request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+      request.headers.get('x-real-ip') ||
+      '0.0.0.0';
 
-    // Inserción directa a Supabase sin filtros de memoria complejos
-    const { error } = await supabase.from('access_logs').insert([{ ip, ruta }]);
-    
-    if (error) {
-      console.error('Error insertando en Supabase:', error);
-    }
+    await supabase.from('access_logs').insert([{ ip }]);
   } catch (error) {
-    console.error('Excepción en proxy:', error);
+    // Silenciar errores
   }
 
   return NextResponse.next();
