@@ -5,16 +5,16 @@ export default async function proxy(request: NextRequest) {
   try {
     const forwardedFor = request.headers.get('x-forwarded-for');
     const ip = forwardedFor ? forwardedFor.split(',')[0].trim() : '127.0.0.1';
-
-    if (ip === '127.0.0.1' || ip === '::1' || ip === 'localhost') {
-      return NextResponse.next();
-    }
-
     const ruta = request.nextUrl.pathname;
 
-    await supabase.from('access_logs').insert([{ ip, ruta }]);
+    // Inserción directa a Supabase sin filtros de memoria complejos
+    const { error } = await supabase.from('access_logs').insert([{ ip, ruta }]);
+    
+    if (error) {
+      console.error('Error insertando en Supabase:', error);
+    }
   } catch (error) {
-    // Silenciar errores
+    console.error('Excepción en proxy:', error);
   }
 
   return NextResponse.next();
@@ -22,13 +22,6 @@ export default async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Coincide solo con las rutas de páginas, excluyendo:
-     * - api (rutas de API)
-     * - _next/static (archivos estáticos)
-     * - _next/image (optimización de imágenes)
-     * - favicon.ico, archivos comunes (png, jpg, css, js, etc.)
-     */
     '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js)).*)',
   ],
 };
