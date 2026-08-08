@@ -50,7 +50,7 @@ export async function crearClienteAction(formData: FormData) {
     return { success: false, error: dbError.message };
   }
 
-  revalidatePath("/admin");
+revalidatePath("/crm/altas-bajas");
   return { success: true, message: "Cliente creado correctamente" };
 }
 
