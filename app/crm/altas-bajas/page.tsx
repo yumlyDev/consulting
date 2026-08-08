@@ -1,7 +1,10 @@
 "use client";
 
 import React from "react";
-import { crearClienteAction, darDeBajaClienteAction } from "./actions";
+import {
+  crearClienteAction,
+  darDeBajaClienteAction,
+} from "@/app/crm/altas-bajas/actions";
 import "./admin.css";
 import MenuAdmin from "@/components/menuadministracion/menuadmin"; // O la ruta de importación que uses
 export default function AdminPanelPage() {
