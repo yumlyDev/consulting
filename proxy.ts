@@ -1,38 +1,36 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
-// Guarda el último registro y el contador de peticiones por IP
-const ipTracker = new Map<string, { lastLog: number; hits: number }>();
+// Mapas separados: uno para el log en BD, otro para el baneo de ataques
+const ipLogs = new Map<string, number>(); 
+const ipBanCounter = new Map<string, { hits: number; lastReset: number }>();
 
 export default async function proxy(request: NextRequest) {
-  try {
-    const ip = 
-      request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
-      request.headers.get('x-real-ip') ||
-      '0.0.0.0';
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || '0.0.0.0';
+  const now = Date.now();
 
-    const now = Date.now();
-    const data = ipTracker.get(ip) || { lastLog: 0, hits: 0 };
+  // 1. LÓGICA DE BANEADO (Si hace más de 50 peticiones en 1 minuto)
+  const banData = ipBanCounter.get(ip) || { hits: 0, lastReset: now };
+  if (now - banData.lastReset > 60000) {
+    banData.hits = 1;
+    banData.lastReset = now;
+  } else {
+    banData.hits++;
+  }
+  ipBanCounter.set(ip, banData);
 
-    // Si pasaron más de 60 segundos (60000 ms), reiniciamos y guardamos la visita
-    if (now - data.lastLog > 60000) {
-      data.hits = 1;
-      data.lastLog = now;
-      
-      const pais = request.headers.get('x-vercel-ip-country') || 'Desconocido';
-      await supabase.from('access_logs').insert([{ ip, pais }]);
-    } else {
-      data.hits++;
-      
-      // Si hace más de 30 peticiones en menos de 60 segundos, se bloquea el acceso
-      if (data.hits > 30) {
-        return new NextResponse('Acceso bloqueado por exceso de peticiones.', { status: 429 });
-      }
-    }
+  if (banData.hits > 50) {
+    return new NextResponse('Bloqueado', { status: 429 });
+  }
 
-    ipTracker.set(ip, data);
-  } catch (error) {
-    // Silenciar errores
+  // 2. LÓGICA DE LOG EN BD (Solo guardamos una vez cada 24 horas por IP)
+  const lastLogged = ipLogs.get(ip) || 0;
+  if (now - lastLogged > 86400000) { // 86400000 ms = 24 horas
+    ipLogs.set(ip, now);
+    const pais = request.headers.get('x-vercel-ip-country') || 'Desconocido';
+    
+    // Disparamos el insert sin esperar (no usamos await para no ralentizar la web)
+    supabase.from('access_logs').insert([{ ip, pais }]).then();
   }
 
   return NextResponse.next();
@@ -40,6 +38,10 @@ export default async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
+    /* 
+       IMPORTANTE: Solo ejecutamos esto en la raíz '/' y rutas internas.
+       Excluimos todo lo demás (js, css, png, etc).
+    */
     '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js)).*)',
   ],
 };
