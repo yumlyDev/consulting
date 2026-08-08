@@ -23,7 +23,23 @@
   min-height: 100vh;
   width: 100%;
 }
-
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+.badge-active {
+  color: #22c55e;
+}
+.badge-inactive {
+  color: #ef4444;
+}
 .admin-header {
   text-align: center;
   max-width: var(--max-width);
